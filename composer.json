@@ -1,0 +1,29 @@
+{
+    "name": "mv/notification",
+    "description": "This is a custom notification, for keeping users notifications received in an application internally.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MvTechZone",
+            "email": "info@mvteczone.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MV\\Notification\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MV\\Notification\\MvNotificationService"
+            ],
+            "aliases": {
+                "MvNotification": "MV\\Notification\\MvFacade"
+            }
+        }
+    }
+}

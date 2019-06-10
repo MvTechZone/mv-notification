@@ -13,8 +13,8 @@ class CreateNotificationsTable extends Migration {
     public function up() {
         Schema::create('notifications', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('admin_id')->nullable();
-            $table->unsignedInteger('user_id')->nullable();
+            $table->unsignedBigInteger('admin_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('subject');
             $table->longText('description');
             $table->boolean('status')->default(false);

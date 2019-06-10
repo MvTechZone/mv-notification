@@ -2,7 +2,8 @@
 
 namespace MV\Notification;
 
-use Carbon\Laravel\ServiceProvider;
+
+use Illuminate\Support\ServiceProvider;
 
 class MvNotificationService extends ServiceProvider {
     /**
@@ -18,6 +19,24 @@ class MvNotificationService extends ServiceProvider {
          * ------------------------------
          */
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+
+        /**
+         * ---------------------------
+         * load configuration file
+         * ---------------------------
+         */
+        $this->mergeConfigFrom(
+            __DIR__ . '/config/mv.php', 'notification'
+        );
+
+        /**
+         * ---------------------------
+         * publishing the config file
+         * ---------------------------
+         */
+        $this->publishes([
+            __DIR__ . '/config/mv.php' => config_path('mv.php'),
+        ], 'config');
 
         /**
          * ---------------------------------------------
@@ -36,7 +55,7 @@ class MvNotificationService extends ServiceProvider {
          * -------------------
          */
         $this->publishes([
-            __DIR__ . '/model' => base_path('app'),
+            __DIR__ . '/Models' => base_path('app'),
         ], 'model');
     }
 

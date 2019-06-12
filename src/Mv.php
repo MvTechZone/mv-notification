@@ -72,15 +72,13 @@ class Mv {
     public static function deleteAllNotifications(bool $admin = false) {
         if ($admin) {
             $mails = auth('admin')->user()->load('notification')
-                ->notification()
-                ->delete();
+                ->notification();
         } else {
             $mails = auth()->user()->load('notification')
-                ->notification()
-                ->delete();
+                ->notification();
         }
 
-        if ($mails)
+        if ($mails->delete())
             return true;
         return false;
     }

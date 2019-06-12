@@ -7,5 +7,5 @@
  */
 
 return [
-    'paginate' => env('MV_PAGINATE', 20),
+    'paginate' => env('MV_NOTIFICATION_PAGINATE', 20),
 ];

@@ -27,7 +27,7 @@ class MvNotificationService extends ServiceProvider {
          * ---------------------------
          */
         $this->mergeConfigFrom(
-            __DIR__ . '/config/mv.php', 'notification'
+            __DIR__ . '/config/mv-notification.php', 'notification'
         );
 
         /**
@@ -35,9 +35,9 @@ class MvNotificationService extends ServiceProvider {
          * publishing the config file
          * ---------------------------
          */
-//        $this->publishes([
-//            __DIR__ . '/config/mv.php' => config_path('mv.php'),
-//        ], 'config');
+        $this->publishes([
+            __DIR__ . '/config/mv-notification.php' => config_path('mv-notification.php'),
+        ], 'config');
 
         /**
          * ---------------------------------------------
@@ -45,9 +45,9 @@ class MvNotificationService extends ServiceProvider {
          * here
          * ---------------------------------------------
          */
-        $this->publishes([
-            __DIR__ . '/database/migrations' => database_path('migrations'),
-        ], 'migrations');
+//        $this->publishes([
+//            __DIR__ . '/database/migrations' => database_path('migrations'),
+//        ], 'migrations');
 
 
         /**

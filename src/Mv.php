@@ -5,7 +5,7 @@ namespace MV\Notification;
 
 
 use App\Admin;
-use MV\Notification\Models\Notification;
+use Mv\Notification\Models\Notification;
 
 class Mv {
     /**
@@ -15,7 +15,7 @@ class Mv {
      * @param $notification_id
      * @param bool $admin
      */
-    public function readNotification($notification_id, bool $admin = false) {
+    public static function readNotification($notification_id, bool $admin = false) {
         if ($admin) {
             $fetchMail = auth('admin')->user()->load('notification')
                 ->notification()
@@ -146,35 +146,32 @@ class Mv {
         if (!empty($admin_id)) {
             foreach (Admin::all() as $admin) {
                 if ($admin_id === $admin->id) {
-                    $saveNotif = new Notification([
+                    Notification::query()->create([
                         'admin_id' => $admin->id,
                         'user_id' => $user_id,
                         'subject' => $subject,
                         'description' => $description,
                     ]);
-                    $saveNotif->save();
 
                     return true;
                 }
 
-                $saveNotif = new Notification([
+                Notification::query()->create([
                     'admin_id' => $admin->id,
                     'user_id' => $user_id,
                     'subject' => $subject,
                     'description' => $description,
                 ]);
-                $saveNotif->save();
 
                 $status = true;
             }
         } else {
-            $saveNotif = new Notification([
+            Notification::query()->create([
                 'admin_id' => $admin_id,
                 'user_id' => $user_id,
                 'subject' => $subject,
                 'description' => $description,
             ]);
-            $saveNotif->save();
         }
 
         if ($saveNotif) {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Mv\Notification\Models;
+namespace MV\Notification\Models;
 
 use App\Admin;
 use App\User;

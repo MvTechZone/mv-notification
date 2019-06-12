@@ -5,7 +5,7 @@ namespace MV\Notification;
 
 
 use App\Admin;
-use Mv\Notification\Models\Notification;
+use MV\Notification\Models\Notification;
 
 class Mv {
     /**

@@ -35,9 +35,9 @@ class MvNotificationService extends ServiceProvider {
          * publishing the config file
          * ---------------------------
          */
-        $this->publishes([
-            __DIR__ . '/config/mv.php' => config_path('mv.php'),
-        ], 'config');
+//        $this->publishes([
+//            __DIR__ . '/config/mv.php' => config_path('mv.php'),
+//        ], 'config');
 
         /**
          * ---------------------------------------------
@@ -55,9 +55,9 @@ class MvNotificationService extends ServiceProvider {
          * publish model here
          * -------------------
          */
-        $this->publishes([
-            __DIR__ . '/Models' => base_path('app'),
-        ], 'model');
+//        $this->publishes([
+//            __DIR__ . '/Models' => base_path('app'),
+//        ], 'model');
     }
 
 

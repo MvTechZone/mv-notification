@@ -14,7 +14,7 @@
   <br><br>
 </p>
 
-This package is custom notify for both admins and users, so instead of using laravel notification. Build for my projects if you want to try it out read through the documentation. 
+This package is custom notify for both admins and users, so instead of using laravel notification. I built this custom notification package for my projects, so if you want to try it out read through the documentation. 
 
 ## Installing
 

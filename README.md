@@ -50,7 +50,7 @@ php artisan vendor:publish --provider="MV\Notification\MvNotificationService"
 You will have to provide this in the *.env* for the api configurations:
 
 ```php
-# This is the pagination number you want tp paginate with <-- default(10) -->
+# This is the pagination number you want to paginate with <-- default(10) -->
 MV_NOTIFICATION_PAGINATE=
 ```
 ## Usage

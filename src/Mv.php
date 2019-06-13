@@ -14,6 +14,7 @@ class Mv {
      * --------------------------
      * @param $notification_id
      * @param bool $admin
+     * @return
      */
     public static function readNotification($notification_id, bool $admin = false) {
         if ($admin) {
@@ -25,6 +26,8 @@ class Mv {
             $fetchMail->update([
                 'status' => true,
             ]);
+
+            return $fetchMail;
         }
 
         $fetchMail = auth()->user()->load('notification')
@@ -35,6 +38,8 @@ class Mv {
         $fetchMail->update([
             'status' => true,
         ]);
+
+        return $fetchMail;
     }
 
     /**

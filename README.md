@@ -18,7 +18,7 @@ This package is custom notify for both admins and users, so instead of using lar
 
 ## Installing
 
-The recommended way to install tpay-api is through
+The recommended way to install codelets-mv/notification is through
 [Composer](http://getcomposer.org).
 
 ```bash
@@ -166,4 +166,7 @@ Follow the steps below on how to use the package:
 [mv-notification-1-repo]: https://github.com/MvTechZone/mv-notification.git
 
 ## Security Vulnerabilities
- For any security vulnerabilities, please email to [MvTechZone](info@mvtechzone.com).
+ For any security vulnerabilities, please email to [MvTechZone](mailto:info@mvtechzone.com).
+ 
+## License
+ This package is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
